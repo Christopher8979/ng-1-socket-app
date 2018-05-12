@@ -1,0 +1,33 @@
+<div class="container">
+
+  
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="first name" ng-model="newItem.first" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="last name" ng-model="newItem.last" aria-describedby="basic-addon1">
+  </div>
+  <button class="btn btn-primary" ng-click="addItem()">Add</button>
+
+  <br>
+  <br>
+  <br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>first</th>
+        <th>last</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in items">
+        <td>{{item.id}}</td>
+        <td>{{item.first}}</td>
+        <td>{{item.last}}</td>        
+        <td><a href="javascript:void(0)" ng-click="deleteItem(item._id)">Delete</a></td>        
+      </tr>
+    </tbody>
+  </table>
+</div>
